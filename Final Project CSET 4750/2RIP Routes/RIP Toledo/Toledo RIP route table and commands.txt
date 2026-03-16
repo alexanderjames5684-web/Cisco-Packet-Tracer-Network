@@ -1,0 +1,45 @@
+Router#
+Router#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#ipv6 router rip rtoledo
+Router(config-rtr)#interface g0/0
+Router(config-if)#ipv6 rip rtoledo enable
+Router(config-if)#exit
+Router(config)#interface g0/1
+Router(config-if)#ipv6 rip rtoledo enable
+Router(config-if)#exit
+Router(config)#interface g0/2
+Router(config-if)#ipv6 rip rtoledo enable
+Router(config-if)#exit
+Router(config)#exit
+Router#show ipv6 route
+IPv6 Routing Table - 10 entries
+Codes: C - Connected, L - Local, S - Static, R - RIP, B - BGP
+       U - Per-user Static route, M - MIPv6
+       I1 - ISIS L1, I2 - ISIS L2, IA - ISIS interarea, IS - ISIS summary
+       ND - ND Default, NDp - ND Prefix, DCE - Destination, NDr - Redirect
+       O - OSPF intra, OI - OSPF inter, OE1 - OSPF ext 1, OE2 - OSPF ext 2
+       ON1 - OSPF NSSA ext 1, ON2 - OSPF NSSA ext 2
+       D - EIGRP, EX - EIGRP external
+C   2001:9A01:C10C:1010::/64 [0/0]
+     via GigabitEthernet0/0, directly connected
+L   2001:9A01:C10C:1010::1/128 [0/0]
+     via GigabitEthernet0/0, receive
+R   2001:9A01:C10C:2010::/64 [120/2]
+     via FE80::260:47FF:FE2B:2502, GigabitEthernet0/1
+R   2001:9A01:C10C:3010::/64 [120/2]
+     via FE80::201:43FF:FEEB:2502, GigabitEthernet0/2
+C   2001:9A01:C10C:4010::/64 [0/0]
+     via GigabitEthernet0/1, directly connected
+L   2001:9A01:C10C:4010::1/128 [0/0]
+     via GigabitEthernet0/1, receive
+C   2001:9A01:C10C:5010::/64 [0/0]
+     via GigabitEthernet0/2, directly connected
+L   2001:9A01:C10C:5010::1/128 [0/0]
+     via GigabitEthernet0/2, receive
+R   2001:9A01:C10C:6010::/64 [120/2]
+     via FE80::201:43FF:FEEB:2502, GigabitEthernet0/2
+     via FE80::260:47FF:FE2B:2502, GigabitEthernet0/1
+L   FF00::/8 [0/0]
+     via Null0, receive
+Router#show running-config

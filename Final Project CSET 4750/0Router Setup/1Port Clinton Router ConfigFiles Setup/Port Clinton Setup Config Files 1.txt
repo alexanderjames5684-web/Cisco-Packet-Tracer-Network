@@ -1,0 +1,96 @@
+Router>
+Router>enable
+Router#conf
+Router#configure t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface Gig
+Router(config)#interface GigabitEthernet0/1
+Router(config-if)#?
+  arp                Set arp type (arpa, probe, snap) or timeout
+  bandwidth          Set bandwidth informational parameter
+  cdp                CDP interface subcommands
+  channel-group      Add this interface to an Etherchannel group
+  crypto             Encryption/Decryption commands
+  custom-queue-list  Assign a custom queue list to an interface
+  delay              Specify interface throughput delay
+  description        Interface specific description
+  duplex             Configure duplex operation.
+  exit               Exit from interface configuration mode
+  fair-queue         Enable Fair Queuing on an Interface
+  hold-queue         Set hold queue depth
+  ip                 Interface Internet Protocol config commands
+  ipv6               IPv6 interface subcommands
+  lldp               LLDP interface subcommands
+  mac-address        Manually set interface MAC address
+  mtu                Set the interface Maximum Transmission Unit (MTU)
+  no                 Negate a command or set its defaults
+  pppoe              pppoe interface subcommands
+  pppoe-client       pppoe client
+  priority-group     Assign a priority group to an interface
+  service-policy     Configure QoS Service Policy
+  shutdown           Shutdown the selected interface
+  speed              Configure speed operation.
+  standby            HSRP interface configuration commands
+  tx-ring-limit      Configure PA level transmit ring limit
+Router(config-if)#
+Router(config-if)#
+Router(config-if)#
+Router(config-if)#
+Router(config-if)#
+Router(config-if)#
+Router(config-if)#
+Router(config-if)#
+Router(config-if)#
+Router(config-if)#
+Router(config-if)#ipv6?
+ipv6  
+Router(config-if)#ipv6 address 2001:9a01:c10c:4010::2/64
+Router(config-if)#no shutdown
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+exit
+Router(config)#interface Gig
+Router(config)#interface GigabitEthernet0/0
+Router(config-if)#ipv6 address 2001:9a01:c10c:2010::1/64
+Router(config-if)#no shutdown
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+exit
+Router(config)#inter
+Router(config)#interface 
+% Incomplete command.
+Router(config)#inter
+Router(config)#interface Gig
+Router(config)#interface GigabitEthernet0/2
+Router(config-if)#ipv6 address 2001:9a01:c10c:6010::1/64
+Router(config-if)#no shutdown
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/2, changed state to up
+exit
+Router(config)#exit
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+
+
+
+
+
+
+
+
+
+Router con0 is now available
+
+
+
+
+
+
+Press RETURN to get started.

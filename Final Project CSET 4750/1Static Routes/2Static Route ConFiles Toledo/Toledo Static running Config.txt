@@ -1,0 +1,95 @@
+Router#show running-config
+Building configuration...
+
+Current configuration : 1077 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+ipv6 unicast-routing
+!
+no ipv6 cef
+!
+!
+!
+!
+license udi pid CISCO2911/K9 sn FTX152420MS-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+ ipv6 address 2001:9A01:C10C:1010::1/64
+ ipv6 enable
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ ipv6 address 2001:9A01:C10C:4010::1/64
+ ipv6 enable
+!
+interface GigabitEthernet0/2
+ no ip address
+ duplex auto
+ speed auto
+ ipv6 address 2001:9A01:C10C:5010::1/64
+ ipv6 enable
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+!
+ip flow-export version 9
+!
+ipv6 route 2001:9A01:C10C:2010::/64 2001:9A01:C10C:4010::2
+ipv6 route 2001:9A01:C10C:3010::/64 2001:9A01:C10C:5010::2
+ipv6 route 2001:9A01:C10C:6010::/64 2001:9A01:C10C:5010::2
+ipv6 route 2001:9A01:C10C:6010::/64 2001:9A01:C10C:4010::2
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end

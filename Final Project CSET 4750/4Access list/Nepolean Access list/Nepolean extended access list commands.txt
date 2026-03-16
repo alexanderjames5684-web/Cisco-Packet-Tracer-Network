@@ -1,0 +1,9 @@
+Router(config)#
+Router(config)#ipv6 access-list Nepolean
+Router(config-ipv6-acl)#deny icmp 2001:9A01:C10C:3010::/64 any echo-request
+Router(config-ipv6-acl)#permit ipv6 any any
+Router(config-ipv6-acl)#exit
+Router(config)#interfac g0/0
+Router(config-if)#ipv6 traffic-filter Nepolean in
+Router(config-if)#exit
+Router(config)#

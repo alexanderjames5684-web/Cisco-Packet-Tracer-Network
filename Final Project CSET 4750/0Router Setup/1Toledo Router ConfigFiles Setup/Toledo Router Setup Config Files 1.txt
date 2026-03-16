@@ -1,0 +1,132 @@
+Router>
+Router>enable
+Router#config
+Router#configure termi
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface Gig
+Router(config)#interface GigabitEthernet0/0
+Router(config-if)#ipv6 address 2001:9a01:c10c:1010::1/64
+Router(config)#interface Gig
+Router(config)#interface GigabitEthernet0/0
+Router(config-if)#no shutdown
+
+%LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to up
+exit
+Router(config)#exit
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+show ipv6 route
+IPv6 Routing Table - 1 entries
+Codes: C - Connected, L - Local, S - Static, R - RIP, B - BGP
+       U - Per-user Static route, M - MIPv6
+       I1 - ISIS L1, I2 - ISIS L2, IA - ISIS interarea, IS - ISIS summary
+       ND - ND Default, NDp - ND Prefix, DCE - Destination, NDr - Redirect
+       O - OSPF intra, OI - OSPF inter, OE1 - OSPF ext 1, OE2 - OSPF ext 2
+       ON1 - OSPF NSSA ext 1, ON2 - OSPF NSSA ext 2
+       D - EIGRP, EX - EIGRP external
+L   FF00::/8 [0/0]
+     via Null0, receive
+Router#
+Router#
+Router#
+
+
+
+
+
+
+
+
+Router con0 is now available
+
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Router>enable
+Router#conf
+Router#configure ter
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#inte
+Router(config)#interface Gig
+Router(config)#interface GigabitEthernet0/1
+Router(config-if)#ipv6 address 2001:9a01:c10c:4010::1/64
+Router(config-if)#exit
+Router(config)#interface Gig
+Router(config)#interface GigabitEthernet0/2
+Router(config-if)#ipv6 address 2001:9a01:c10c:5010::1/64
+Router(config-if)#exit
+Router(config)#exit
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+show ipv6 route
+IPv6 Routing Table - 1 entries
+Codes: C - Connected, L - Local, S - Static, R - RIP, B - BGP
+       U - Per-user Static route, M - MIPv6
+       I1 - ISIS L1, I2 - ISIS L2, IA - ISIS interarea, IS - ISIS summary
+       ND - ND Default, NDp - ND Prefix, DCE - Destination, NDr - Redirect
+       O - OSPF intra, OI - OSPF inter, OE1 - OSPF ext 1, OE2 - OSPF ext 2
+       ON1 - OSPF NSSA ext 1, ON2 - OSPF NSSA ext 2
+       D - EIGRP, EX - EIGRP external
+L   FF00::/8 [0/0]
+     via Null0, receive
+Router#
+Router#
+Router#
+Router#conf
+Router#configure term
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#inter
+Router(config)#interface Gig
+Router(config)#interface GigabitEthernet0/1
+Router(config-if)#no shutdown
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to up
+exit
+Router(config)#int
+Router(config)#interface Giga
+Router(config)#interface GigabitEthernet0/2
+Router(config-if)#no shutdown
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/2, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/2, changed state to up
+exit
+
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+
+
+
+
+
+
+
+
+
+Router con0 is now available
+
+
+
+
+
+
+Press RETURN to get started.
